@@ -224,7 +224,7 @@ Duplicate events are handled by keeping the earliest timestamp for each event id
 
 Sessions are track from `session_ping` events.
 
-A new session starts when the gap between two consecutive pings for the same user is greater than 120 seconds.
+A new session starts when the gap between two pings for the same user is greater than 120 seconds.
 
 Sessions are tracked without field `state`.
 
@@ -273,17 +273,6 @@ For each map and date, the API calculates:
 - best player username
 
 The best player is calculated using cumulative win ratio on that map up to and including the given date.
-
----
-
-## Notes
-
-This solution focuses on:
-
-- clear SQL-based transformations
-- persistent analytical tables/views
-- practical handling of imperfect event data
-- simple and documented REST API usage
 
 ---
 

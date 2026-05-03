@@ -84,7 +84,6 @@ def load_maps(conn):
 def main():
     conn=sqlite3.connect(DB_PATH)
     create_tables(conn)
-    print("done")
     load_events(conn)
     load_maps(conn)
     conn.close()
